@@ -20,12 +20,12 @@ CREATE TABLE Customers (
 ); 
 CREATE TABLE orders (
   order_id INT PRIMARY KEY,
-  customer_id(Foreign Key referencing Customers table),
+  customer_id(FOREIGN KEY referencing Customers table),
   order_date DATE not null ,
 );
 CREATE TABLE Order_Details (
     order_detail/id INT PRIMARY KEY,
-    order_id(Foreign Key referencing Orders table),
-    book_id (Foreign Key referencing Books table),
+    order_id FOREIGN KEY referencing Orders table),
+    book_id (FOREIGN KEY referencing Books table),
     quantity DOUBLE,
 );
